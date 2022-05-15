@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="cover-container d-flex mx-auto  flex-column">
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Welcome</h1>
+    <p class="lead">
+      click this button to open camara.
+    </p>
+    <p class="lead">
+      <a href="{% url 'predict' %}" class="btn btn-lg btn-secondary">start</a>
+    </p>
+  </main>
+</div>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 50%;
+  }
+</style>
+
+{% endblock %}
